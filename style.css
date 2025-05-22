@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.25rem;
+}
+
+body {
+    background: linear-gradient(to bottom, #1a130f, #3a2e25);
+    color: #f5f1e3;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#game {
+    max-width: 600px;
+    width: 100%;
+    background-color: #2e211a;
+    border: 4px double #8b5a2b;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+#stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #3b2a1e;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 2px solid #a9744f;
+}
+
+.stat {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+#xpText {
+    color: #6666f1;
+}
+
+#healthText {
+    color: #38cc38;
+}
+
+#goldText {
+    color: #c2c23d;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#controls button {
+    background: linear-gradient(to bottom, #64432d, #4b2f1a);
+    color: #fceabb;
+    border: 2px solid #a9744f;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+#controls button:hover {
+    background: linear-gradient(to bottom, #7a5639, #5a3922);
+    transform: scale(1.03);
+}
+
+#controls button:active {
+    transform: scale(0.98);
+}
+
+#monsterStats {
+    background-color: #5a1e1e;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 2px solid #c14444;
+    display: none;
+}
+
+#monsterStats .stat {
+    color: #ffe6e6;
+}
+
+#text {
+    background-color: #3b2a1e;
+    padding: 18px;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    border: 2px solid #8b5a2b;
+    white-space: pre-line;
+}
+
+@media (max-width: 600px) {
+    #stats {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #controls button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    #text {
+        font-size: 0.95rem;
+    }
+}
